@@ -34,6 +34,7 @@ body{
     font-family:  raleway_c, sans-serif;
     line-height: 1.75;
     height: var(--depth);
+    font-weight: 300;
 }
 
 .container{
@@ -60,9 +61,7 @@ body{
     align-items: center;
     transition: var(--transition), opacity .75s ease;
     will-change: transform;
-
-
-
+    transform-style: preserve-3d;
 
     font-size: 40px;
 
