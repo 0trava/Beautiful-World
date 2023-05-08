@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,9 +10,8 @@
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 6000px;
-    --transition: all 500ms cubic-bezier(0.075, 0.500, 0, 1);
-    --transition-timing-function: cubic-bezier(0.075, 0.500, 0, 1);
+    --depth: 4000px;
+	--transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
 @font-face {
@@ -48,8 +47,6 @@ body{
 .gallery{
     transform-style: preserve-3d; /* !!!!!!!! Обов'язковий параметр для роботи з глибиною занурення контенту */
     height: 100%;
-    width: 100%;
-    position: relative;
 
 }
 
@@ -124,7 +121,6 @@ video.frame-media-left{
 }
 
 .text-left > * {
-    /* width: 200vw; */
     position: relative;
     right: 18vw;
 
@@ -137,6 +133,6 @@ video.frame-media-left{
 
 .frame p {
     max-width: 30vw;
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
