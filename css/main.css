@@ -92,7 +92,7 @@ h1, h2, h3, h4{
 }
 
 .frame-media-right{
-    left: calc(var(--side-small)/2 * var(--index)+ var(--gutter))
+    left: calc(var(--side-small) / 2 * var(--index) + var(--gutter))
 }
 
 .frame_bg{
