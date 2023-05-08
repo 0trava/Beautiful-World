@@ -1,26 +1,25 @@
 // 3D scroll
 
 let zSpacing = -1000,
-    lastPos = zPacing /5,
-    $frames = document.getElementsByClassName('frame'),
-    frame = Array.from($frames),
-    zVal =[]
+		lastPos = zSpacing / 5,
+		$frames = document.getElementsByClassName('frame'),
+		frames = Array.from($frames),
+		zVals = []
 
+window.onscroll = function() {
 
-window.onscroll = function(){
+	let top = document.documentElement.scrollTop,
+			delta = lastPos - top
 
-    let top = document.documentElement.scrollTop,
-        delta = lastPos - top
+	lastPos = top
 
-    lastPos = top
+	frames.forEach(function(n, i) {
+		zVals.push((i * zSpacing) + zSpacing)
+		zVals[i] += delta * -5.5
+		let frame = frames[i],
+				transform = `translateZ(${zVals[i]}px)`,
+				opacity = zVals[i] < Math.abs(zSpacing) / 1.8 ? 1 : 0
+		frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`)
+	})
 
-    
-
-    frames.forEach( function(n,i){
-        zVals.push((i * zSpacing) + zSpacing)
-        zVals[i] += delta * -5 // швидкість пролистування
-        let frame = frames[i],
-            transform = `translateZ(${zVals[i]}px)`
-        frame.setAttribute('style', `transform: ${transform}`)
-    })
 }

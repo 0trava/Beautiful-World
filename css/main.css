@@ -10,6 +10,7 @@
     --gutter: 30px;
     --side-small: 26;
     --size-big: 36;
+    --depth: 4000px;
 }
 
 @font-face {
@@ -30,6 +31,7 @@ body{
     font-size: calc(var(--index)*.8);
     font-family:  raleway_c, sans-serif;
     line-height: 1.75;
+    height: var(--depth);
 }
 
 .container{
