@@ -11,6 +11,8 @@
     --side-small: 26;
     --size-big: 36;
     --depth: 4000px;
+    --transition: all 500ms cubic-bezier(0.075, 0.500, 0, 1);
+    --transition-timing-function: cubic-bezier(0.075, 0.500, 0, 1);
 }
 
 @font-face {
@@ -45,6 +47,8 @@ body{
 .gallery{
     transform-style: preserve-3d; /* !!!!!!!! Обов'язковий параметр для роботи з глибиною занурення контенту */
     height: 100%;
+    position: relative;
+
 }
 
 .frame {
@@ -54,4 +58,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: var(--transition), opacity .75s ease;
+    will-change: transform;
+
+
+
+
+    font-size: 40px;
+
 }
