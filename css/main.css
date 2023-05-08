@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+    --index: calc(1vh +1vw);
+    --gutter: 30px;
+    --side-small: 26;
+    --size-big: 36;
+}
+
+@font-face {
+    font-family: raleway_c;
+    src: url(../fonts/raleway-v22-cyrillic-300.woff2);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: raleway_c;
+    src: url(../fonts/raleway-v22-cyrillic-100.woff2);
+    font-weight: 100;
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-size: calc(var(--index)*.8);
+}
