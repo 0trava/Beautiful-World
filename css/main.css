@@ -10,7 +10,7 @@
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 4000px;
+    --depth: 6000px;
     --transition: all 500ms cubic-bezier(0.075, 0.500, 0, 1);
     --transition-timing-function: cubic-bezier(0.075, 0.500, 0, 1);
 }
@@ -71,13 +71,14 @@ body{
 h1, h2, h3, h4{
     font-weight: 100;
     text-transform: uppercase;
+    width: min-content;
+    line-height: 1;
 }
 
 .frame h2{
     text-align: center;
     font-size: calc(var(--index) * 3.3);
-    width: min-content;
-    line-height: 1;
+
 
 }
 
@@ -108,6 +109,34 @@ video.frame-media{
 }
 
 video.frame-media-right{
-    left: calc(var(--side-small) / 2 * var(--index) + var(--gutter))
+    left: calc(var(--side-big) / 2 * var(--index) + var(--gutter))
+}
+
+video.frame-media-left{
+    right: calc(var(--side-big) / 2 * var(--index) + var(--gutter))
+}
+
+
+.text-right > * {
+    position: relative;
+    left: 18vw;
+
+}
+
+.text-left > * {
+    /* width: 200vw; */
+    position: relative;
+    right: 18vw;
+
+}
+
+.frame h3 {
+    font-size: calc(var(--index) * 3);
+
+}
+
+.frame p {
+    max-width: 30vw;
+    margin-top: 5vh;
 }
 
