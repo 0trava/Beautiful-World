@@ -28,4 +28,28 @@ body{
     background-color: black;
     color: white;
     font-size: calc(var(--index)*.8);
+    font-family:  raleway_c, sans-serif;
+    line-height: 1.75;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    perspective: 1500px; /* !!!!!!!! Обов'язковий параметр для роботи з глибиною занурення контенту */
+}
+
+
+.gallery{
+    transform-style: preserve-3d; /* !!!!!!!! Обов'язковий параметр для роботи з глибиною занурення контенту */
+    height: 100%;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
