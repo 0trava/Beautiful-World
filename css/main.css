@@ -10,7 +10,7 @@
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 4500px;
+    --depth: 4700px;
 	--transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
@@ -140,9 +140,10 @@ video.frame-media-left{
 
 
 .soundbutton{
+    z-index: 5;
     position: fixed;
     bottom: 5vh;
-    right: 5vh;
+	right: 5vw;
     cursor: pointer;
     width: 24px;
     transition: .25s ease;

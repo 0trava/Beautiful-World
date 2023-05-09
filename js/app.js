@@ -29,14 +29,26 @@ window.scrollTo(0, 1)
 
 
 
+
 // Audio
 
 let soundButton = document.querySelector('.soundbutton'),
-    audio = document.querySelector('.audio')
+		audio = document.querySelector('.audio')
 
 soundButton.addEventListener('click', e => {
-    soundButton.classList.toggle('paused')
-    audio.paused ? audio.play() : audio.paused;
+	soundButton.classList.toggle('paused')
+	audio.paused ? audio.play() : audio.pause()
 })
+
+
+// Перевірка що користувач зараз на сторінці, якщо ні, то ставимо на паузу.
+
+window.onfocus = function(){
+    soundButton.classList.contains('paused') ? audio.pause() : audio.play()
+}
+
+window.onblur = function(){
+    audio.pause()
+}
 
 
