@@ -6,7 +6,7 @@
 }
 
 :root{
-    --index: calc(1vh +1vw);
+    --index: calc(1vh + 1vw);
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
